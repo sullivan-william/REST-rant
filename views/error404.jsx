@@ -1,7 +1,7 @@
 const React = require('react')
 const Def = require('./default')
 
-function error404() {
+function error404 () {
     return (
         <Def>
             <main>
