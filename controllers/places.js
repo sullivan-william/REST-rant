@@ -36,8 +36,21 @@ router.post('/', (req, res) => {
     res.redirect('/places')
 })
 
-router.put('/:id/edit', (req, res) => {
-    res.send('EDIT/stub route')
+router.get('/:id/edit', (req, res) => {
+    let id = Number(req.params.id)
+    if (isNaN(id)) {
+        res.render('error404')
+    }
+    else if (!places[id]) {
+        res.render('error404')
+    }
+    else {
+        res.render('places/edit', { place: places[id] })
+    }
+})
+
+router.put('/:id', (req, res) => {
+    res.send('EDITED')
 })
 
 router.delete('/:id', (req, res) => {
