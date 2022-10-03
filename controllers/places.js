@@ -26,6 +26,7 @@ router.post('/', (req, res) => {
   })
 })
 
+// GET route for new place form
 router.get('/new', (req, res) => {
   res.render('places/new')
 })
@@ -42,22 +43,27 @@ router.get('/:id', (req, res) => {
   })
 })
 
+// PUT route for handling place edits
 router.put('/:id', (req, res) => {
   res.send('PUT /places/:id stub')
 })
 
+// DELETE route for handling place deletion
 router.delete('/:id', (req, res) => {
   res.send('DELETE /places/:id stub')
 })
 
+// GET route for loading place edit form
 router.get('/:id/edit', (req, res) => {
   res.send('GET edit form stub')
 })
 
+// POST route for new rants(comments)
 router.post('/:id/rant', (req, res) => {
   res.send('GET /places/:id/rant stub')
 })
 
+// DELETE route for rant(comment) deletion
 router.delete('/:id/rant/:rantId', (req, res) => {
     res.send('GET /places/:id/rant/:rantId stub')
 })
