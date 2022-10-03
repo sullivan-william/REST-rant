@@ -8,15 +8,15 @@ function show(data) {
                 <h1>{data.place.name}</h1>
                 <img src={data.place.pic} alt={data.place.name} style={{ width: '30em', height: '30em' }} />
                 <div>
-                    <h3>Location</h3>
-                    <p>{data.place.city}, {data.place.state}</p>
+                    <h2>Description</h2>
+                    <h3>{data.place.showEstablished()}</h3>
                 </div>
                 <div>
-                    <h3>Cuisines</h3>
-                    <p>{data.place.cuisines}</p>
+                    <h2>Cuisines</h2>
+                    <h3>{data.place.cuisines}</h3>
                 </div>
                 <div>
-                    <h3>Rating</h3>
+                    <h2>Rating</h2>
                     <p>Not Rated</p>
                 </div>
                 <div>
