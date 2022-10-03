@@ -50,7 +50,14 @@ router.put('/:id', (req, res) => {
 
 // DELETE route for handling place deletion
 router.delete('/:id', (req, res) => {
-  res.send('DELETE /places/:id stub')
+  db.Place.findByIdAndDelete(req.params.id)
+  .then(() => {
+    res.redirect('/places')
+  })
+  .catch(err => {
+    console.log(err)
+    res.render('error404')
+  })
 })
 
 // GET route for loading place edit form
