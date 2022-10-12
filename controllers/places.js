@@ -54,7 +54,14 @@ router.get('/:id', (req, res) => {
 
 // PUT route for handling place edits
 router.put('/:id', (req, res) => {
-  res.send('PUT /places/:id stub')
+  db.Place.findByIdAndUpdate(req.params.id, req.body, { new: true })
+  .then(updatedPlace => {
+    res.redirect(`/places/${req.params.id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.render('error404')
+  })
 })
 
 // DELETE route for handling place deletion
@@ -71,7 +78,14 @@ router.delete('/:id', (req, res) => {
 
 // GET route for loading place edit form
 router.get('/:id/edit', (req, res) => {
-  res.send('GET edit form stub')
+  db.Place.findById(req.params.id)
+  .then(place => {
+    res.render('places/edit', { place })
+  })
+  .catch(err => {
+    console.log(err)
+    res.render('error404')
+  })
 })
 
 // POST route for new rants(comments)
