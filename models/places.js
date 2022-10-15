@@ -13,7 +13,8 @@ const placeSchema = new mongoose.Schema({
         type: Number,
         min: [1000, "Too old for this website!"],
         max: [new Date().getFullYear(), "Not fair to review a place that hasn't opened yet!"]
-    }
+    },
+    comments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Comment' }]
 })
 
 placeSchema.methods.showEstablished = function() {
