@@ -6,7 +6,7 @@ function error404 () {
         <Def>
             <main>
                 <h1>404: PAGE NOT FOUND</h1>
-                <p>Oops, sorry, we can't find this page!</p>
+                <p>Where the hell we at!</p>
                 <div>
                     <img src='/images/cat.jpg' alt='cat' style={{width: '30em', height: '30em'}}/>
                     <div>
