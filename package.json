@@ -2,7 +2,8 @@
   "name": "rest-rant",
   "version": "1.0.0",
   "engines": {
-    "node": "18.10.0"
+    "node": "18.10.0",
+    "npm": "8.19.2"
   },
   "description": "REST-Rant is an app where users can review restaurants.",
   "main": "index.js",
