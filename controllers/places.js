@@ -16,6 +16,15 @@ router.get('/', (req, res) => {
 
 // POST route for adding a new place
 router.post('/', (req, res) => {
+  if (req.body.pic === '') {
+    req.body.pic = '/images/default.jpg'
+  }
+  if (req.body.city === '') {
+    req.body.city = 'Anytown'
+  }
+  if (req.body.state === '') {
+    req.body.state = 'USA'
+  }
   db.Place.create(req.body)
   .then(() => {
     res.redirect('/places')
