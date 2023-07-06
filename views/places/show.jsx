@@ -87,10 +87,6 @@ function show(data) {
                         <label htmlFor='stars'>Rating</label>
                         <input type='number' max='5' min='0' id='stars' name='stars'></input>
                     </div>
-                    <div className='form-group'>
-                        <label htmlFor='rant'>Rant?</label>
-                        <input type='checkbox' id='rant' name='rant'></input>
-                    </div>
                     <button type='submit' className='btn btn-primary'>Comment</button>
                 </form>
                 <br></br>

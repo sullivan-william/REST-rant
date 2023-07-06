@@ -109,7 +109,12 @@ router.get('/:id/edit', (req, res) => {
 
 // POST route for new rants(comments)
 router.post('/:id/comment', (req, res) => {
-  req.body.rant = req.body.rant ? true : false
+  if (req.body.stars < 3) {
+    req.body.rant = true 
+  } else {
+    req.body.rant = false
+  }
+  req.body.author = req.body.author ? req.body.author : 'Anonymous'
   db.Place.findById(req.params.id)
     .then(place => {
       db.Comment.create(req.body)
