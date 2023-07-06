@@ -64,6 +64,15 @@ router.get('/:id', (req, res) => {
 
 // PUT route for handling place edits
 router.put('/:id', (req, res) => {
+  if (req.body.pic === '') {
+    req.body.pic = '/images/default.jpg'
+  }
+  if (req.body.city === '') {
+    req.body.city = 'Anytown'
+  }
+  if (req.body.state === '') {
+    req.body.state = 'USA'
+  }
   db.Place.findByIdAndUpdate(req.params.id, req.body, { new: true })
   .then(updatedPlace => {
     res.redirect(`/places/${req.params.id}`)
