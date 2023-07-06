@@ -65,10 +65,6 @@ function show(data) {
                     <h3>{data.place.cuisines}</h3>
                 </div>
                 <div>
-                    <h2>Rating</h2>
-                    <p>Not Rated</p>
-                </div>
-                <div>
                     <h2>Comments</h2>
                     {comments}
                 </div>
