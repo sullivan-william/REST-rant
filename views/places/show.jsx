@@ -81,7 +81,7 @@ function show(data) {
                     </div>
                     <div className='form-group'>
                         <label htmlFor='stars'>Rating</label>
-                        <input type='number' max='5' min='0' id='stars' name='stars'></input>
+                        <input type='number' max='5' min='0' id='stars' name='stars' required></input>
                     </div>
                     <button type='submit' className='btn btn-primary'>Comment</button>
                 </form>
