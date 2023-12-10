@@ -37,7 +37,7 @@ function edit_form(data) {
                             <input className='form-control' id='founded' name='founded' type='number' value={new Date().getFullYear} />
                         </div>
                     </div>
-                    <input className='btn btn-primary' type='submit' value='Update Place'/>
+                    <input className='teal-btn' type='submit' value='Update Place'/>
                 </form>
             </main>
         </Def>

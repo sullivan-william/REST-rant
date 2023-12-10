@@ -41,7 +41,7 @@ function show(data) {
                     </h3>
                     <h4>Rating: {c.stars}</h4>
                     <form method='POST' action={`/places/${data.place.id}/comment/${c.id}?_method=DELETE`}>
-                        <input type='submit' className='btn btn-danger' value='Delete Comment' />
+                        <input type='submit' className='red-btn' value='Delete Comment' />
                     </form>
                 </div>
             )
@@ -52,7 +52,6 @@ function show(data) {
         <Def>
             <main>
                 <h1>{data.place.name}</h1>
-                <h2>Rating</h2>
                 {rating}
                 <br></br>
                 <img src={data.place.pic} alt={data.place.name} style={{ width: '30em', height: '30em' }} />
@@ -83,15 +82,15 @@ function show(data) {
                         <label htmlFor='stars'>Rating</label>
                         <input type='number' max='5' min='0' id='stars' name='stars' required></input>
                     </div>
-                    <button type='submit' className='btn btn-primary'>Comment</button>
+                    <button type='submit' className='teal-btn'>Comment</button>
                 </form>
                 <br></br>
-                <div>
-                    <a href={`/places/${data.place.id}/edit`} className="btn btn-warning">
+                <div className='flex'>
+                    <a href={`/places/${data.place.id}/edit`} className="tertiary-btn">
                         Edit
                     </a>
                     <form method="POST" action={`/places/${data.place.id}?_method=DELETE`}>
-                        <button type="submit" className="btn btn-danger">
+                        <button type="submit" className="red-btn">
                             Delete
                         </button>
                     </form>

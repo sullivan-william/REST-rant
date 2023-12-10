@@ -1,10 +1,73 @@
+:root {
+  --main-bg-color: #2F3E46;
+  --secondary-color: #E1CA96;
+  --my-red: #E16F7C;
+  --my-blueish-green: #05A8AA;
+  --tertiary-color: #B1B7D1;
+}
+
+.teal-btn {
+  background-color: var(--my-blueish-green);
+  border-color: #047577;
+  color: whitesmoke;
+  box-shadow: 7px 7px 28px 1px rgba(0, 0, 0, 0.24);
+}
+
+.teal-btn:active, .red-btn:active, .tertiary-btn:active {
+  transform: scale(0.98);
+  box-shadow: 3px 3px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.teal-btn:hover {
+  background-color: #047577;
+  border-color: var(--my-blueish-green);
+}
+
+.red-btn {
+  background-color: var(--my-red);
+  border-color: #DC5665;
+  color: whitesmoke;
+  box-shadow: 7px 7px 28px 1px rgba(0, 0, 0, 0.24);
+}
+
+.red-btn:hover {
+  background-color: #DC5665;
+  border-color: var(--my-red);
+}
+
+.tertiary-btn {
+  background-color: var(--tertiary-color);
+  border-color: #98A0C3;
+  color: whitesmoke;
+  box-shadow: 7px 7px 28px 1px rgba(0, 0, 0, 0.24);
+  padding: 2px 10px;
+}
+
+.tertiary-btn:hover {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.tertiary-btn:hover {
+  background-color: #98A0C3;
+  border-color: var(--tertiary-color);
+}
+
 h1 {
     text-align: center;
-    color: cornflowerblue;
+    color: var(--my-blueish-green);
   }
 
+h2 a {
+  color: var(--secondary-color);
+}
+
+h2 a:hover {
+  color: #DBC080;
+}
+
 nav {
-    background-color: cornflowerblue;
+    background-color: var(--secondary-color);
     padding: 10px;
 }
 
@@ -19,22 +82,49 @@ nav li {
 }
 
 nav a {
-    color: white;
+    color: var(--main-bg-color);
     font-size: 1.5em;
+    font-weight: bold;
 }
 
 nav a:hover {
-    color: pink;
-    text-decoration: none;
+    color: #212B31;
+    text-decoration: underline;
 }
 
+a {
+  color: var(--my-blueish-green);
+}
+
+a:hover {
+  color: #047577;
+}
+
+
 body {
-  background-color: lightblue;
+  background-color: black;
+  color: whitesmoke;
   text-align: center;
 }
 
 main {
   margin-right: 20px;
   margin-left: 20px;
-  background-color: white;
+  background-color: var(--main-bg-color);
+  padding: 10px;
+}
+
+h2 {
+  color: var(--secondary-color);
+}
+
+.border {
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }

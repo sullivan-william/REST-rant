@@ -1,6 +1,6 @@
 # Project REST-Rant
 
-REST-Rant is an app where users can review restaurants.
+REST-Rant is an app made using JavaScript, CSS, Express, MongoDB, and Mongoose. This app follows the model, views, controller file formatting using JSX as the view engine. This app demonstrates full CRUD capabilities with the options to create new places and comments, edit places, and delete places and comments.
 
 | Method | Path | Purpose |
 | ------ | ---- | ------- |
@@ -28,3 +28,15 @@ REST-Rant is an app where users can review restaurants.
 | state | String |
 | cuisines | String |
 | pic | String |
+| founded | Number |
+| comments | Array |
+
+**comments**
+
+| Field | Type |
+| ---------- | ------------ |
+| _id | Object ID |
+| author | String |
+| rant | Boolean |
+| stars | Number |
+| content | String |

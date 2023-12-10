@@ -12,8 +12,9 @@ function home () {
                         Photo by <a href="https://unsplash.com/@briewilly?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Chad Montano</a> on <a href="https://unsplash.com/s/photos/food?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                     </div>
                 </div>
+                <br></br>
                 <a href='/places'>
-                    <button className="btn-primary">Places Page</button>
+                    <button className="teal-btn">Places Page</button>
                 </a>
             </main>
         </Def>
