@@ -162,3 +162,18 @@ color: var(--secondary-color);
   margin: auto;
   width: 50%;
 }
+
+#index-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+#index-main h2 {
+  font-size: 50px;
+}
+
+#index-main p {
+  font-size: 25px;
+}
