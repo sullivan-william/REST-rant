@@ -26,22 +26,22 @@ function show(data) {
             stars += '⭐️'
         }
         rating = (
-            <h3>
+            <div id='rating'>
                 {stars}
-            </h3>
+            </div>
         )
 
         comments = data.place.comments.map(c => {
             return (
                 <div className='border'>
-                    <h2 className='rant'>{c.rant ? 'Rant! 😡' : 'Rave! 😻'}</h2>
-                    <h4>{c.content}</h4>
-                    <h3>
+                    <h3 className='rant'>{c.rant ? 'Rant! 😡' : 'Rave! 😻'}</h3>
+                    <p>{c.content}</p>
+                    <p className='author'>
                         <strong>- {c.author}</strong>
-                    </h3>
-                    <h4>Rating: {c.stars}</h4>
+                    </p>
+                    <p>Rating: {c.stars}</p>
                     <form method='POST' action={`/places/${data.place.id}/comment/${c.id}?_method=DELETE`}>
-                        <input type='submit' className='red-btn' value='Delete Comment' />
+                        <input type='submit' className='red-btn large' value='Delete Comment' />
                     </form>
                 </div>
             )
@@ -50,18 +50,18 @@ function show(data) {
 
     return (
         <Def>
-            <main>
+            <main id='show-main'>
                 <h1>{data.place.name}</h1>
                 {rating}
                 <br></br>
                 <img src={data.place.pic} alt={data.place.name} style={{ width: '30em', height: '30em' }} />
                 <div>
                     <h2>Description</h2>
-                    <h3>{data.place.showEstablished()}</h3>
+                    <p>{data.place.showEstablished()}</p>
                 </div>
                 <div>
                     <h2>Cuisines</h2>
-                    <h3>{data.place.cuisines}</h3>
+                    <p>{data.place.cuisines}</p>
                 </div>
                 <div>
                     <h2>Comments</h2>
@@ -82,15 +82,15 @@ function show(data) {
                         <label htmlFor='stars'>Rating</label>
                         <input type='number' max='5' min='0' id='stars' name='stars' required></input>
                     </div>
-                    <button type='submit' className='teal-btn'>Comment</button>
+                    <button type='submit' className='teal-btn large'>Comment</button>
                 </form>
                 <br></br>
                 <div className='flex'>
-                    <a href={`/places/${data.place.id}/edit`} className="tertiary-btn">
+                    <a href={`/places/${data.place.id}/edit`} className="tertiary-btn large">
                         Edit
                     </a>
                     <form method="POST" action={`/places/${data.place.id}?_method=DELETE`}>
-                        <button type="submit" className="red-btn">
+                        <button type="submit" className="red-btn large">
                             Delete
                         </button>
                     </form>

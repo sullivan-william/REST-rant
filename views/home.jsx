@@ -14,7 +14,7 @@ function home() {
                     </div>
                 </div>
                 <br></br>
-                <a href='/places' className='large'>
+                <a href='/places' className='largest'>
                     <button className="teal-btn">Places Page</button>
                 </a>
             </main>
