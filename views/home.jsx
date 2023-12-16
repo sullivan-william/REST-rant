@@ -5,7 +5,7 @@ function home() {
     return (
         <Def>
             <main>
-                <h1 id='home-h1'>REST-<br></br>rant</h1>
+                <h1 id='home-h1'>REST-<wbr></wbr>rant</h1>
                 <br></br>
                 <div>
                     <img src='/images/tacos.jpg' alt='tacos' style={{ width: '80vw', height: 'auto' }} />
@@ -15,7 +15,7 @@ function home() {
                 </div>
                 <br></br>
                 <a href='/places' className='largest'>
-                    <button className="teal-btn">Places Page</button>
+                    <button className="teal-btn large">Places Page</button>
                 </a>
             </main>
         </Def>

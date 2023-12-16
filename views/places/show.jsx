@@ -26,7 +26,7 @@ function show(data) {
             stars += '⭐️'
         }
         rating = (
-            <div id='rating'>
+            <div className='large'>
                 {stars}
             </div>
         )
@@ -41,7 +41,7 @@ function show(data) {
                     </p>
                     <p>Rating: {c.stars}</p>
                     <form method='POST' action={`/places/${data.place.id}/comment/${c.id}?_method=DELETE`}>
-                        <input type='submit' className='red-btn large' value='Delete Comment' />
+                        <input type='submit' className='red-btn small' value='Delete Comment' />
                     </form>
                 </div>
             )
@@ -50,7 +50,7 @@ function show(data) {
 
     return (
         <Def>
-            <main id='show-main'>
+            <main className='mobile'>
                 <h1>{data.place.name}</h1>
                 {rating}
                 <br></br>
@@ -82,15 +82,15 @@ function show(data) {
                         <label htmlFor='stars'>Rating</label>
                         <input type='number' max='5' min='0' id='stars' name='stars' required></input>
                     </div>
-                    <button type='submit' className='teal-btn large'>Comment</button>
+                    <button type='submit' className='teal-btn medium'>Comment</button>
                 </form>
                 <br></br>
                 <div className='flex'>
-                    <a href={`/places/${data.place.id}/edit`} className="tertiary-btn large">
+                    <a href={`/places/${data.place.id}/edit`} className="tertiary-btn medium">
                         Edit
                     </a>
                     <form method="POST" action={`/places/${data.place.id}?_method=DELETE`}>
-                        <button type="submit" className="red-btn large">
+                        <button type="submit" className="red-btn medium">
                             Delete
                         </button>
                     </form>

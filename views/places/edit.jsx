@@ -6,6 +6,7 @@ function edit_form(data) {
         <Def>
             <main>
                 <h1>Edit</h1>
+                <br></br>
                 <form method='POST' action={`/places/${data.place.id}?_method=PUT`}>
                     <div className='row'>
                         <div className='form-group col-sm-6'>
@@ -37,7 +38,8 @@ function edit_form(data) {
                             <input className='form-control' id='founded' name='founded' type='number' value={new Date().getFullYear} />
                         </div>
                     </div>
-                    <input className='teal-btn' type='submit' value='Update Place'/>
+                    <br></br>
+                    <input className='teal-btn medium' type='submit' value='Update Place'/>
                 </form>
             </main>
         </Def>

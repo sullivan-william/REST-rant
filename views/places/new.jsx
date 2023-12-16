@@ -12,9 +12,10 @@ function new_form(data) {
     }
     return (
         <Def>
-            <main>
+            <main id='new-main'>
                 <h1>Add a New Place</h1>
                 {message}
+                <br></br>
                 <form method='POST' action='/places'>
                     <div className='row'>
                         <div className='form-group col-sm-6'>
@@ -46,7 +47,8 @@ function new_form(data) {
                             <input className='form-control' id='founded' name='founded' type='number' value={new Date().getFullYear} />
                         </div>
                     </div>
-                    <input className='teal-btn' type='submit' value='Add Place' />
+                    <br></br>
+                    <input className='teal-btn medium' type='submit' value='Add Place' />
                 </form>
             </main>
         </Def>
